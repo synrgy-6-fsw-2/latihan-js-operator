@@ -20,7 +20,7 @@ const shippingFeeText = document.getElementById("shipping-fee-text");
 const totalText = document.getElementById("total-text");
 
 discountText.innerHTML = DISCOUNT;
-shippingFeeText.innerHTML = SHIPPING_FEE;
+shippingFeeText.innerHTML = "Rp100";
 
 const inputItemName = document.getElementById("itemName");
 const inputPrice = document.getElementById("price");
