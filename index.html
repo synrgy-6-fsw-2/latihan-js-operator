@@ -1,62 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
+    <title>MyCart</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MyCart</title>
     <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="app" class="app-container">
-      <h1>MyCart</h1>
-      <form id="form-cart">
-        <div class="form-control">
-          <label for="itemName">Item Name</label>
-          <input
-            id="itemName"
-            name="itemName"
-            placeholder="Type product item name"
-          />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="app" class="app-container flex flex-col justify-start">
+        <h1 class="mx-auto text-[2rem] font-semibold">MyCart</h1>
+        <form id="form-cart">
+            <div class="form-control">
+                <label for="itemName" class="text-[16px] font-medium my-2">Item Name</label>
+                <input id="itemName" type="text" name="itemName" class="p-3 rounded-[10px]" placeholder="Type product item name" />
+            </div>
+            <div class="form-control">
+                <label for="price" class="text-[16px] font-medium my-2">Price</label>
+                <input id="price" type="number" name="price" class="p-3 rounded-[10px]" placeholder="Type product product price" />
+            </div>
+            <div class="form-control">
+                <label for="qty" class="text-[16px] font-medium my-2">Qty</label>
+                <input id="qty" name="qty" type="number" class="p-3 rounded-[10px]" placeholder="Type qty for this item" />
+            </div>
+            <div class="flex justify-center w-full">
+                <button type="submit" class="w-full p-3 bg-slate-700 text-white rounded-lg my-3">Submit</button>
+            </div>
+        </form>
+        <div class="flex flex-col w-full my-5">
+            <div class="flex flex-row w-full">
+                <div class="flex flex-col w-[50%] gap-8">
+                    <div>
+                        <h3 class="text-[14px] font-semibold">Product</h3>
+                        <div id="product-text" class="text-[32px] font-bold">-</div>
+                    </div>
+                    <div>
+                        <h3 class="text-[14px] font-semibold">Subtotal</h3>
+                        <div id="subtotal-text" class="text-[32px] font-bold">-</div>
+                    </div>
+                </div>
+                <div class="flex flex-col w-[50%] gap-8">
+                    <div>
+                        <h3 class="text-[14px] font-semibold">Discount</h3>
+                        <div id="discount-text" class="text-[32px] font-bold">10%</div>
+                    </div>
+                    <div>
+                        <h3 class="text-[14px] font-semibold">Shipping fee</h3>
+                        <div id="shipping-fee-text" class="text-[32px] font-bold">3000</div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-2 border-dashed border-slate-300 rounded-lg bg-white shadow-md flex p-10 justify-center content-center mt-12">
+                <div class="flex flex-col mx-auto my-auto">
+                    <h2 class="text-[20px] font-semibold">Total</h2>
+                    <div class="text-red-700 text-[3rem] font-bold p-4" id="total-text">-</div>
+                </div>
+            </div>
         </div>
-        <div class="form-control">
-          <label for="price">Price</label>
-          <input
-            id="price"
-            name="price"
-            placeholder="Type product product price"
-          />
-        </div>
-        <div class="form-control">
-          <label for="qty">Qty</label>
-          <input id="qty" name="qty" placeholder="type qty for this item" />
-        </div>
-        <div>
-          <button type="submit">Submit</button>
-        </div>
-      </form>
-      <div>
-        <div>
-          <h3>Product</h3>
-          <div id="product-text">-</div>
-        </div>
-        <div>
-          <h3>Subtotal</h3>
-          <div id="subtotal-text">-</div>
-        </div>
-        <div>
-          <h3>Discount</h3>
-          <div id="discount-text">10%</div>
-        </div>
-        <div>
-          <h3>Shipping fee</h3>
-          <div id="shipping-fee-text">3000</div>
-        </div>
-        <div>
-          <h2>Total</h2>
-          <div id="total-text">-</div>
-        </div>
-      </div>
     </div>
-    <script src="app.js"></script>
-  </body>
+
+    <script src="app.js "></script>
+</body>
+
 </html>
