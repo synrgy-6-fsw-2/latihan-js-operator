@@ -17,7 +17,9 @@ const formCart = document.getElementById("form-cart");
 
 function onChangeInputName(e) {
   productText.textContent = e.target.value;
+  inputItemName.value;
 }
+
 function onSubmitCart(e) {}
 
 inputItemName.addEventListener("change", onChangeInputName);
