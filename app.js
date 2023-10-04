@@ -1,4 +1,4 @@
-const DISCOUNT = 0.1; // 10%
+const DISCOUNT = 0.1;
 const SHIPPING_FEE = 100;
 
 const productText = document.getElementById('product-text');
@@ -7,7 +7,7 @@ const discountText = document.getElementById('discount-text');
 const shippingFeeText = document.getElementById('shipping-fee-text');
 const totalText = document.getElementById('total-text');
 
-discountText.innerHTML = DISCOUNT;
+discountText.innerHTML = "10%";
 shippingFeeText.innerHTML = SHIPPING_FEE;
 
 const inputItemName = document.getElementById('itemName');
@@ -15,9 +15,16 @@ const inputPrice = document.getElementById('price');
 const inputQty = document.getElementById('qty');
 const formCart = document.getElementById('form-cart');
 
-inputItemName.addEventListener('input', onChangeInputName);
-inputPrice.addEventListener('submit', onSubmitCart);
-inputQty.addEventListener('submit', onSubmitCart);
+inputItemName.addEventListener('change', onChangeInputName);
+formCart.addEventListener('submit', onSubmitCart);
+
+function formatPrice(price_){
+    const price = price_
+
+    const formattedPrice = price.toLocaleString();
+
+    return formattedPrice
+}
 
 function onChangeInputName(e) {
     const inputValue = inputItemName.value;
@@ -42,11 +49,8 @@ function onSubmitCart(e) {
 
     // console.log(totalProcessedValue)
 
-    subTotalText.textContent = `${subTotalProcessedValue}`;
+    subTotalText.textContent = ` ${formatPrice(subTotalProcessedValue)}`;
 
-    totalText.textContent = `${totalProcessedValue}`;
+    totalText.textContent = ` ${formatPrice(totalProcessedValue)}`;
     
 }
-
-inputItemName.addEventListener('change', onChangeInputName);
-formCart.addEventListener('submit', onSubmitCart);

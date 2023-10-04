@@ -11,72 +11,79 @@
       crossorigin="anonymous"
     />
   </head>
-  <body>
-    <div id="app" class="app-container bg-light">
-      <h3 class="text-center">MyCart</h3>
+  <body class="pb-5">
+    <div id="app" class="app-container border border-0 rounded-2 mt-5">
+      <div class="bg-dark py-1"><h3 class="text-center" style="color: white;">MyCart</h3></div>
       
+      <!-- Form -->
       <form id="form-cart" class="p-2">
         <div class="mb-3">
-          <label for="itemName" class="forml-label">Item Name</label>
+          <label for="itemName" class="form-label">Item Name</label>
           <input
             id="itemName"
+            type="text"
             name="itemName"
             class="form-control"
             placeholder="Type product item name"
           />
         </div>
         <div class="mb-3">
-          <label for="price" class="forml-label">Price</label>
+          <label for="price" class="form-label">Price</label>
           <input
             id="price"
+            type="number"
             name="price"
             class="form-control"
             placeholder="Type product product price"
           />
         </div>
         <div class="mb-3">
-          <label for="qty"  class="forml-label">Qty</label>
+          <label for="qty"  class="form-label">Qty</label>
           <input
             id="qty"
+            type="number"
             class="form-control"
             name="qty"
             placeholder="type qty for this item"
           />
         </div>
         <div>
-          <button type="submit" class="btn btn-primary mt-2">Submit</button>
+          <button type="submit" class="btn btn-secondary mt-2 mb-3 col-12">Submit</button>
         </div>
       </form>
-      <div id="result" class="p-2">
-        <div>
-          <h5>Product</h5>
+      
+      <!-- Result -->
+      <div id="result" class="card p-3">
+        <div class="mb-2">
+          <h6>Product</h6>
           <div id="product-text">
             <p>-</p>
           </div>
         </div>
-        <div>
-          <h5>Subtotal</h5>
-          <div id="subtotal-text">
+        <div class="mb-2">
+          <h6>Subtotal</h6>
+          <div class="d-flex align-items-start">
             <p>Rp</p>
+            <div id="subtotal-text">-</div>
           </div>
         </div>
-        <div>
-          <h5>Discount</h5>
+        <div class="mb-2">
+          <h6>Discount</h6>
           <div id="discount-text">
             <p>10%</p>
           </div>
         </div>
-        <div>
-          <h5>Shipping fee</h5>
+        <div class="mb-2">
+          <h6>Shipping fee</h6>
           <div id="shipping-fee-text">
             <p>Rp3000</p>
           </div>
         </div>
         <div>
-          <h5>Total</h5>
-          <div id="total-text">
+          <h6>Total</h6>
+          <div class="d-flex align-items-start">
             <p style="font-weight: bold;">Rp</p>
-          </div>
+            <div id="total-text">-</div>
         </div>
       </div>
     </div>

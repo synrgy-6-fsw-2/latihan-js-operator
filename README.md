@@ -2,11 +2,11 @@
 
 Anggota 1
 - Name  : Handoyo Dwi Prasetyo
-- Email : 
+- Email : handoyodwiprasetyoo@gmail.com
 
 Anggota 2
 - Name  : Saifulloh Fadli
-- Email : 
+- Email : saifulloh.fadli@gmail.com
 
 Anggota 3
 - Name  : Romi Julianto
