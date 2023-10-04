@@ -3,7 +3,8 @@
 }
 html,
 body {
-  margin: 0;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   padding: 0;
 }
 .app-container {
@@ -13,10 +14,15 @@ body {
   border: 1px solid black;
   border-radius: 1rem;
   padding: 0.5rem;
+  background: linear-gradient(to bottom, #b3e0ff, #6699cc);
 }
 
 h1 {
   text-align: center;
+}
+
+form{
+  margin-top: 2rem;
 }
 
 .form-label {
@@ -37,4 +43,8 @@ h1 {
 .form-control input {
   display: block;
   width: 100%;
+}
+
+.form-card{
+  margin-bottom: 1rem;
 }

@@ -3,6 +3,6 @@
 # Kelompok 5
 
 - Julius Adetya Eka Bhaswara
-- Agnes Nabahan
+- Agnes Nababan
 - Theodora Rini
 - I Gusti Ngurah Adi Permana
