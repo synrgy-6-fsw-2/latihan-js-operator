@@ -34,23 +34,30 @@ function onChangeInputName(e) {
 function onSubmitCart(e) {
     e.preventDefault();
 
+
     const priceInputValue = inputPrice.value;
     const qtyInputValue = inputQty.value;
 
-    const DISKON = DISCOUNT;
-    
-    const FEE = SHIPPING_FEE;
+    if(priceInputValue == "" && qtyInputValue == ""){
+        alert("Masukkan Price dan Quantity..");
+    } else {
+        const DISKON = DISCOUNT;
+        
+        const FEE = SHIPPING_FEE;
 
-    // console.log(DISKON)
-    // console.log(SHIPPING_FEE)
+        // console.log(DISKON)
+        // console.log(SHIPPING_FEE)
 
-    const subTotalProcessedValue =  priceInputValue * qtyInputValue;
-    const totalProcessedValue = subTotalProcessedValue - (subTotalProcessedValue * DISKON) + FEE;
-
+        
+        const subTotalProcessedValue =  priceInputValue * qtyInputValue;
+        const totalProcessedValue = subTotalProcessedValue - (subTotalProcessedValue * DISKON) + FEE;
+        subTotalText.textContent = ` ${formatPrice(subTotalProcessedValue)}`;
+        totalText.textContent = ` ${formatPrice(totalProcessedValue)}`;
+    }
     // console.log(totalProcessedValue)
-
-    subTotalText.textContent = ` ${formatPrice(subTotalProcessedValue)}`;
-
-    totalText.textContent = ` ${formatPrice(totalProcessedValue)}`;
-    
+    // if (subTotalProcessedValue > 300){
+    //     totalText.textContent = ` ${formatPrice(totalProcessedValue)}`;
+    // } else {
+    //     totalText.textContent = "-";
+    // }
 }
