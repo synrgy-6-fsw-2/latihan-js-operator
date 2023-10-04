@@ -15,8 +15,38 @@ const inputPrice = document.getElementById('price');
 const inputQty = document.getElementById('qty');
 const formCart = document.getElementById('form-cart');
 
-function onChangeInputName(e) {}
-function onSubmitCart(e) {}
+inputItemName.addEventListener('input', onChangeInputName);
+inputPrice.addEventListener('submit', onSubmitCart);
+inputQty.addEventListener('submit', onSubmitCart);
+
+function onChangeInputName(e) {
+    const inputValue = inputItemName.value;
+    productText.textContent = `${inputValue}`;
+}
+
+function onSubmitCart(e) {
+    e.preventDefault();
+
+    const priceInputValue = inputPrice.value;
+    const qtyInputValue = inputQty.value;
+
+    const DISKON = DISCOUNT;
+    
+    const FEE = SHIPPING_FEE;
+
+    // console.log(DISKON)
+    // console.log(SHIPPING_FEE)
+
+    const subTotalProcessedValue =  priceInputValue * qtyInputValue;
+    const totalProcessedValue = subTotalProcessedValue - (subTotalProcessedValue * DISKON) + FEE;
+
+    // console.log(totalProcessedValue)
+
+    subTotalText.textContent = `${subTotalProcessedValue}`;
+
+    totalText.textContent = `${totalProcessedValue}`;
+    
+}
 
 inputItemName.addEventListener('change', onChangeInputName);
 formCart.addEventListener('submit', onSubmitCart);
