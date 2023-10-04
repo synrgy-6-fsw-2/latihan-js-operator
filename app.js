@@ -40,8 +40,8 @@ function onSubmitCart(e) {
     alert("some input might be invalid, please check your input");
     return;
   }
-  if (qty < 0 || price < 0) {
-    alert("input cannot be a negative value");
+  if (qty <= 0 || price <= 0) {
+    alert("input cannot be a negative value or zero");
     return;
   }
   const subtotal = price * qty;
