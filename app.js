@@ -15,7 +15,10 @@ const inputPrice = document.getElementById('price');
 const inputQty = document.getElementById('qty');
 const formCart = document.getElementById('form-cart');
 
-function onChangeInputName(e) {}
+function onChangeInputName(e) {
+    const itemName = e.target.value;
+    productText.textContent = itemName;
+}
 function onSubmitCart(e) {
     e.preventDefault(); //biar ga refresh
     const itemPrice = parseFloat(inputPrice.value);
