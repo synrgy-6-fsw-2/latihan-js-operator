@@ -40,6 +40,10 @@ function onSubmitCart(e) {
     alert("some input might be invalid, please check your input");
     return;
   }
+  if (qty < 0 || price < 0) {
+    alert("input cannot be a negative value");
+    return;
+  }
   const subtotal = price * qty;
   const discount = subtotal * DISCOUNT;
   const total = subtotal - discount + SHIPPING_FEE;
