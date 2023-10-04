@@ -11,7 +11,13 @@ body {
   margin: 0 auto;
   min-height: 100vh;
   border: 1px solid black;
+  border-radius: 1rem;
   padding: 0.5rem;
+}
+
+.card {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .app-container > form > .form-control {
