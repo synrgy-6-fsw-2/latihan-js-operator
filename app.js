@@ -15,8 +15,28 @@ const inputPrice = document.getElementById('price');
 const inputQty = document.getElementById('qty');
 const formCart = document.getElementById('form-cart');
 
-function onChangeInputName(e) {}
-function onSubmitCart(e) {}
+function onChangeInputName(e) {
+    productText.innerHTML = e.target.value;
+}
+function onSubmitCart(e) {
+    e.preventDefault();
+    if ((!inputPrice.value) || (!inputQty.value)) {
+        return null;
+    }
+    price = Number(inputPrice.value);
+    qty = Number(inputQty.value);
+    subtotal = price * qty;
+    disc = subtotal * DISCOUNT;
+    total = subtotal - disc + SHIPPING_FEE;
+
+    subTotalText.innerHTML = subtotal;
+    discountText.innerHTML = disc;
+    totalText.innerHTML = total;
+
+
+
+
+}
 
 inputItemName.addEventListener('change', onChangeInputName);
 formCart.addEventListener('submit', onSubmitCart);
