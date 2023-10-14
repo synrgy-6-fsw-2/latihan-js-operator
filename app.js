@@ -16,7 +16,7 @@ const inputQty = document.getElementById('qty');
 const formCart = document.getElementById('form-cart');
 
 function onChangeInputName(e) {
-    productText.innerHTML = e.target.value;
+    productText.textContent = e.target.value;
 }
 function onSubmitCart(e) {
     e.preventDefault();
@@ -32,11 +32,7 @@ function onSubmitCart(e) {
     subTotalText.innerHTML = subtotal;
     discountText.innerHTML = disc;
     totalText.innerHTML = total;
-
-
-
-
 }
 
-inputItemName.addEventListener('change', onChangeInputName);
+inputItemName.addEventListener('keydown', onChangeInputName);
 formCart.addEventListener('submit', onSubmitCart);
